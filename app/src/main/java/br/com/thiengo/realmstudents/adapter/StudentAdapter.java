@@ -8,9 +8,8 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import br.com.thiengo.realmstudents.AddUpdateDisciplineActivity;
+import br.com.thiengo.realmstudents.AddUpdateStudentActivity;
 import br.com.thiengo.realmstudents.R;
-import br.com.thiengo.realmstudents.domain.Discipline;
 import br.com.thiengo.realmstudents.domain.Student;
 import io.realm.Realm;
 import io.realm.RealmBaseAdapter;
@@ -19,11 +18,11 @@ import io.realm.RealmResults;
 /**
  * Created by viniciusthiengo on 11/2/15.
  */
-public class DisciplineAdapter extends RealmBaseAdapter<Discipline> implements ListAdapter {
+public class StudentAdapter extends RealmBaseAdapter<Student> implements ListAdapter {
 
     private Realm realm;
 
-    public DisciplineAdapter( Context context, Realm realm, RealmResults<Discipline> realmResults, boolean automaticUpdate ){
+    public StudentAdapter(Context context, RealmResults<Student> realmResults, boolean automaticUpdate){
         super(context, realmResults, automaticUpdate);
         this.realm = realm;
     }
@@ -33,7 +32,7 @@ public class DisciplineAdapter extends RealmBaseAdapter<Discipline> implements L
         CustomViewHolder holder;
 
         if( convertView == null ){
-            convertView = inflater.inflate(R.layout.item_discipline, parent, false);
+            convertView = inflater.inflate(R.layout.item_student, parent, false);
             holder = new CustomViewHolder();
             convertView.setTag( holder );
 
@@ -45,15 +44,14 @@ public class DisciplineAdapter extends RealmBaseAdapter<Discipline> implements L
             holder = (CustomViewHolder) convertView.getTag();
         }
 
-        final Discipline d = realmResults.get(position);
-        int amountStudents = realm.where(Student.class).equalTo("grades.discipline.id", d.getId()).findAll().size();
-        holder.tvName.setText( d.getName()+" ("+amountStudents+")" );
+        final Student s = realmResults.get(position);
+        holder.tvName.setText( s.getName() );
 
         holder.btUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(context, AddUpdateDisciplineActivity.class);
-                it.putExtra(Discipline.ID, d.getId());
+                Intent it = new Intent(context, AddUpdateStudentActivity.class);
+                it.putExtra(Student.ID, s.getId());
                 context.startActivity(it);
             }
         });
@@ -63,7 +61,7 @@ public class DisciplineAdapter extends RealmBaseAdapter<Discipline> implements L
             public void onClick(View v) {
                 Realm realm = Realm.getDefaultInstance();
                 realm.beginTransaction();
-                d.removeFromRealm();
+                s.removeFromRealm();
                 realm.commitTransaction();
                 realm.close();
             }

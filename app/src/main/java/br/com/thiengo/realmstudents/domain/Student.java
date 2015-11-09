@@ -1,17 +1,20 @@
 package br.com.thiengo.realmstudents.domain;
 
-import java.util.List;
+import io.realm.RealmList;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by viniciusthiengo on 11/2/15.
  */
-public class Student {
+public class Student extends RealmObject {
     public static final String ID = "br.com.thiengo.realmexample.domain.Student.ID";
 
+    @PrimaryKey
     private long id;
     private String name;
     private String email;
-    private List<Discipline> disciplines;
+    private RealmList<Grade> grades;
 
     public long getId() {
         return id;
@@ -37,11 +40,11 @@ public class Student {
         this.email = email;
     }
 
-    public List<Discipline> getDisciplines() {
-        return disciplines;
+    public RealmList<Grade> getGrades() {
+        return grades;
     }
 
-    public void setDisciplines(List<Discipline> disciplines) {
-        this.disciplines = disciplines;
+    public void setGrades(RealmList<Grade> grades) {
+        this.grades = grades;
     }
 }

@@ -6,40 +6,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 
-import br.com.thiengo.realmstudents.adapter.DisciplineAdapter;
-import br.com.thiengo.realmstudents.domain.Discipline;
+import br.com.thiengo.realmstudents.adapter.StudentAdapter;
+import br.com.thiengo.realmstudents.domain.Student;
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 
-public class DisciplinesActivity extends AppCompatActivity {
+public class StudentsActivity extends AppCompatActivity {
 
     private Realm realm;
-    private RealmResults<Discipline> disciplines;
+    private RealmResults<Student> students;
     private RealmChangeListener realmChangeListener;
-    private ListView lvDisciplines;
+    private ListView lvStudents;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_disciplines);
+        setContentView(R.layout.activity_students);
 
         realm = Realm.getDefaultInstance();
 
         realmChangeListener = new RealmChangeListener() {
             @Override
             public void onChange() {
-                ((DisciplineAdapter) lvDisciplines.getAdapter()).notifyDataSetChanged();
+                ((StudentAdapter) lvStudents.getAdapter()).notifyDataSetChanged();
             }
         };
 
         realm.addChangeListener(realmChangeListener);
-        disciplines = realm.where( Discipline.class ).findAll();
+        students = realm.where( Student.class ).findAll();
 
-        lvDisciplines = (ListView) findViewById(R.id.lv_disciplines);
-        lvDisciplines.setAdapter( new DisciplineAdapter( this, realm, disciplines, false ));
+        lvStudents = (ListView) findViewById(R.id.lv_students);
+        lvStudents.setAdapter( new StudentAdapter( this, students, false ));
     }
+
 
     @Override
     protected void onDestroy() {
@@ -49,9 +50,10 @@ public class DisciplinesActivity extends AppCompatActivity {
 
     }
 
+
     // LISTENERS
-        public void callAddDiscipline( View view){
-            Intent it = new Intent( this, AddUpdateDisciplineActivity.class );
-            startActivity(it);
-        }
+    public void callAddStudent( View view){
+        Intent it = new Intent( this, AddUpdateStudentActivity.class );
+        startActivity(it);
+    }
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.thiengo.realmstudents.domain.Discipline;
+import br.com.thiengo.realmstudents.domain.Student;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -23,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 
         Button btDisciplines = (Button) findViewById(R.id.bt_disciplines);
+        Button btStudents = (Button) findViewById(R.id.bt_students);
 
         Realm realm = Realm.getDefaultInstance();
         RealmResults<Discipline> disciplines = realm.where(Discipline.class).findAll();
+        RealmResults<Student> students = realm.where(Student.class).findAll();
 
         btDisciplines.setText( "Disciplinas ("+disciplines.size()+")" );
+        btStudents.setText( "Estudantes ("+students.size()+")" );
         realm.close();
     }
 
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        public void callStudents( View view){ }
-
+        public void callStudents( View view){
+            Intent it = new Intent(this, StudentsActivity.class);
+            startActivity(it);
+        }
 }

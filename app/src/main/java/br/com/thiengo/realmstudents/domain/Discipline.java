@@ -12,7 +12,6 @@ public class Discipline extends RealmObject {
     @PrimaryKey
     private long id;
     private String name;
-    private double grade;
 
 
     public long getId() {
@@ -31,11 +30,4 @@ public class Discipline extends RealmObject {
         this.name = name;
     }
 
-    public double getGrade() {
-        return grade;
-    }
-
-    public void setGrade(double grade) {
-        this.grade = grade;
-    }
 }
