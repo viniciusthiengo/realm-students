@@ -15,6 +15,9 @@ public class Student extends RealmObject {
     private String name;
     private String email;
     private RealmList<Grade> grades;
+    private Address address;
+    private RealmList<Student> friends;
+
 
     public long getId() {
         return id;
@@ -46,5 +49,21 @@ public class Student extends RealmObject {
 
     public void setGrades(RealmList<Grade> grades) {
         this.grades = grades;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public RealmList<Student> getFriends() {
+        return friends;
+    }
+
+    public void setFriends(RealmList<Student> friends) {
+        this.friends = friends;
     }
 }

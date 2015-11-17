@@ -2,6 +2,7 @@ package br.com.thiengo.realmstudents.application;
 
 import android.app.Application;
 
+import br.com.thiengo.realmstudents.domain.MigrationData;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -15,7 +16,9 @@ public class CustomApplication extends Application {
 
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this)
                 .name("realm-students.realm")
-                .deleteRealmIfMigrationNeeded()
+                .schemaVersion(MigrationData.VERSION)
+                .migration(new MigrationData())
+                //.deleteRealmIfMigrationNeeded()
                 .build();
 
         Realm.setDefaultConfiguration( realmConfiguration );
