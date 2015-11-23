@@ -1,0 +1,65 @@
+[{
+  "id": 1,
+  "street": "Rosalinas",
+  "neighborhood": "Eldorado",
+  "city": "Serra",
+  "state": "Espírito Santo",
+  "country": "Brasil"
+},
+  {
+    "id": 2,
+    "street": "Tartálias",
+    "neighborhood": "Sebastião",
+    "city": "Vitória",
+    "state": "Espírito Santo",
+    "country": "Brasil"
+  },
+  {
+    "id": 3,
+    "street": "Bem-te-vis",
+    "neighborhood": "José Alves",
+    "city": "São Paulo",
+    "state": "São Paulo",
+    "country": "Brasil"
+  },
+  {
+    "id": 4,
+    "street": "Quadras Uno",
+    "neighborhood": "Tuliverdes",
+    "city": "Rio de Janeiro",
+    "state": "Rio de Janeiro",
+    "country": "Brasil"
+  },
+  {
+    "id": 5,
+    "street": "Moconhas",
+    "neighborhood": "Itaparica",
+    "city": "Vila Velha",
+    "state": "Espírito Santo",
+    "country": "Brasil"
+  },
+  {
+    "id": 6,
+    "street": "Sexta-quinta",
+    "neighborhood": "Rosangela",
+    "city": "Cariacica",
+    "state": "Espírito Santo",
+    "country": "Brasil"
+  },
+  {
+    "id": 7,
+    "street": "Carajós",
+    "neighborhood": "Tulipas",
+    "city": "Ipatinga",
+    "state": "Minas Gerais",
+    "country": "Brasil"
+  },
+  {
+    "id": 8,
+    "street": "Sizenando",
+    "neighborhood": "Laranjeiras",
+    "city": "Serra",
+    "state": "Espírito Santo",
+    "country": "Brasil"
+  }
+]

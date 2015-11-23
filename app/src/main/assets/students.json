@@ -1,0 +1,121 @@
+[{
+  "id": 1,
+  "name": "Jorge Vasconcelos",
+  "email": null,
+  "grades": [{
+    "id": 5,
+    "grade": 55,
+    "discipline": {
+      "id": 9,
+      "name": "Biology"
+    }
+  },
+    {
+      "id": 9,
+      "grade": 99,
+      "discipline": {
+        "id": 7,
+        "name": "Chemistry"
+      }
+    }]
+},
+  {
+    "id": 2,
+    "name": "Juliana Cunha",
+    "email": null,
+    "grades": [{
+      "id": 3,
+      "grade": 91,
+      "discipline": {
+        "id": 5,
+        "name": "Statistics"
+      }
+    },
+      {
+        "id": 10,
+        "grade": 65,
+        "discipline": {
+          "id": 3,
+          "name": "Science"
+        }
+      }]
+  },
+  {
+    "id": 3,
+    "name": "Fernanda Oliveira",
+    "email": null,
+    "grades": [{
+      "id": 1,
+      "grade": 89,
+      "discipline": {
+        "id": 2,
+        "name": "History"
+      }
+    }]
+  },
+  {
+    "id": 4,
+    "name": "Carlos Alves",
+    "email": null,
+    "grades": [{
+      "id": 4,
+      "grade": 90,
+      "discipline": {
+        "id": 10,
+        "name": "Anthropology"
+      }
+    }]
+  },
+  {
+    "id": 5,
+    "name": "Adriana Solimões",
+    "email": null,
+    "grades": [{
+      "id": 7,
+      "grade": 100,
+      "discipline": {
+        "id": 6,
+        "name": "Business"
+      }
+    }]
+  },
+  {
+    "id": 6,
+    "name": "Kelly Sózer",
+    "email": null,
+    "grades": [{
+      "id": 8,
+      "grade": 97.5,
+      "discipline": {
+        "id": 8,
+        "name": "Art"
+      }
+    }]
+  },
+  {
+    "id": 7,
+    "name": "Rodney Silva",
+    "email": null,
+    "grades": [{
+      "id": 6,
+      "grade": 69.5,
+      "discipline": {
+        "id": 4,
+        "name": "Biomedical Engineering"
+      }
+    }]
+  },
+  {
+    "id": 8,
+    "name": "Muhammed Salim",
+    "email": null,
+    "grades": [{
+      "id": 2,
+      "grade": 67.5,
+      "discipline": {
+        "id": 1,
+        "name": "Mathmatics"
+      }
+    }]
+  }
+]
