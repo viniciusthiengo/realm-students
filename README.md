@@ -30,10 +30,6 @@ A ordem a ser seguida é exatamente a mesma ordem apresentada abaixo:
 
 7. [Iniciando Base Realm Com Dados JSON - Parte 7](https://www.thiengo.com.br/iniciando-base-realm-com-dados-json-parte-7).
 
-### Novas aulas
-
-Não deixe de se inscrever na lista de e-mails do Blog 📫 para receber com exclusividade e em primeira mão as novas aulas do projeto Android de mobile-commerce.
-
 ### AndroidX
 
 Caso você queira ter o projeto de exemplo ainda mais atual, isso em relação às tecnologias Android já liberadas desde a criação dessa série sobre a biblioteca Realm.
