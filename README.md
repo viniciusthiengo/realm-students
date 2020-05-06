@@ -10,6 +10,10 @@ Todas as aulas, artigos, são também acompanhados de suas versões em vídeos. 
 
 <img src="https://www.thiengo.com.br/img/post/normal/krgi0dl1el7vrdjufhafrnibp3261fe5600c78ccafe39388887938798a.png" width="580" alt="Gráfico comparando a persistência Realm com outras APIs de persistência local Android">
 
+O projeto de exemplo que será desenvolvido durante toda a série é um projeto de cadastro de estudantes e matérias:
+
+<img src="https://www.thiengo.com.br/img/post/normal/rinod9hassj17snd7f4mggis568cc81a3c2f5c52b38e4e301b9b92af9a.png" width="220" alt="Aplicativo Android da série Persistência Realm">
+
 ### Todas as aulas
 
 A seguir a lista de todas as aulas sobre esse projeto Realm Android.
