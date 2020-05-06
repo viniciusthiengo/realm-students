@@ -6,7 +6,7 @@ A principal proposta dessa série de artigos é a apresentação completa de tod
 
 A Realm veio, por exemplo, para "tomar o lugar" do popular [SQLite](https://www.thiengo.com.br/sqlite-no-android-entendendo-e-utilizando), também muito utilizado para persistência local Android.
 
-Todas as aulas, artigos, são também acompanhados de suas versões em vídeos. A primeira aula é a [Persistência de Dados Com Realm no Android - Parte 1](https://www.thiengo.com.br/persistencia-de-dados-com-realm-no-android-parte-1).
+Todas as aulas, artigos, são também acompanhados de suas versões em vídeos (ao final de cada artigo). A primeira aula é a [Persistência de Dados Com Realm no Android - Parte 1](https://www.thiengo.com.br/persistencia-de-dados-com-realm-no-android-parte-1).
 
 <img src="https://www.thiengo.com.br/img/post/normal/krgi0dl1el7vrdjufhafrnibp3261fe5600c78ccafe39388887938798a.png" width="580" alt="Gráfico comparando a persistência Realm com outras APIs de persistência local Android">
 
